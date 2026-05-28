@@ -180,10 +180,6 @@ export const Dashboard = () => {
         <div className="flex-1 overflow-y-auto p-8">
           {response ? (
             <div className="max-w-3xl mx-auto">
-              <div className="mb-6 p-4 bg-zinc-900 rounded-xl border border-zinc-800">
-                <p className="text-xs text-zinc-500 mb-2">Your prompt</p>
-                <p className="text-white">{prompt}</p>
-              </div>
               <div className="p-4 bg-zinc-900 rounded-xl border border-zinc-800">
                 <p className="text-xs text-zinc-500 mb-2">Response</p>
                 <p className="text-zinc-300 whitespace-pre-wrap">{response}</p>
