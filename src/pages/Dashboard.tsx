@@ -90,11 +90,23 @@ export const Dashboard = () => {
     <div className="h-screen bg-zinc-950 flex overflow-hidden">
       {/* Sidebar */}
       <div className="w-72 bg-zinc-900 border-r border-zinc-800 flex flex-col">
-        <div className="p-4 border-b border-zinc-800">
+      <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
+        <div>
           <h1 className="text-xl font-bold text-white">Inkr</h1>
           <p className="text-xs text-zinc-500 mt-0.5">Write like you mean business</p>
         </div>
-
+        <button
+          onClick={() => {
+            setPrompt('')
+            setResponse('')
+            setSelected(null)
+            setError('')
+          }}
+          className="text-xs bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white px-3 py-1.5 rounded-lg transition-colors"
+        >
+          + New
+        </button>
+      </div>
 <div className="p-4 border-b border-zinc-800">
   <div className="bg-zinc-800 rounded-lg p-3 mb-3">
     <p className="text-xs text-zinc-500 mb-1">Credits remaining</p>
