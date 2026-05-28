@@ -11,7 +11,7 @@ import { Landing } from './pages/Landing'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<div>Landing</div>} />
+      <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
     <Route path="/dashboard" element={
@@ -20,7 +20,6 @@ function App() {
       </ProtectedRoute>
       } />
       <Route path="/auth/callback" element={<AuthCallback />} />
-      <Route path="/" element={<Landing />} />
     </Routes>
   )
 }
