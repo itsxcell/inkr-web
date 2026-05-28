@@ -53,6 +53,7 @@ export const Dashboard = () => {
       const res = await api.post('/api/generations', { prompt })
       setResponse(res.data.generation.response)
       setCredits(res.data.remainingBalance)
+      setPrompt('') 
       fetchHistory()
     } catch (err: any) {
       if (err.response?.status === 402) {
@@ -86,7 +87,7 @@ export const Dashboard = () => {
     }
     }
   return (
-    <div className="min-h-screen bg-zinc-950 flex">
+    <div className="h-screen bg-zinc-950 flex overflow-hidden">
       {/* Sidebar */}
       <div className="w-72 bg-zinc-900 border-r border-zinc-800 flex flex-col">
         <div className="p-4 border-b border-zinc-800">
